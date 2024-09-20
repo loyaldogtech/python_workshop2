@@ -18,4 +18,16 @@ balance = 0
 
 print(name + " has been registered with a starting balance of $" + str(balance))
 
-# task 2 complete
+while True:
+    name_to_validate = input("Enter name: ")
+    pin_to_validate = input("Enter PIN: ")
+
+    if name_to_validate == name and pin_to_validate == pin:
+        print("Login successful!")
+        break
+    else:
+        print("Invalid credentials!")
+
+while True:
+    atm_menu(name)
+    option = input("Choose an option: ")
