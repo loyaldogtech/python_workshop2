@@ -17,3 +17,5 @@ pin = input("Enter PIN: ")
 balance = 0
 
 print(name + " has been registered with a starting balance of $" + str(balance))
+
+# task 2 complete
