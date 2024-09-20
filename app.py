@@ -1,3 +1,4 @@
+import banking_pkg.account
 def atm_menu(name):
     print("")
     print("          === Automated Teller Machine ===          ")
@@ -31,3 +32,14 @@ while True:
 while True:
     atm_menu(name)
     option = input("Choose an option: ")
+    if option == "1":
+        banking_pkg.account.show_balance(balance)
+    elif option == "2":
+        balance = banking_pkg.account.deposit(balance)
+        banking_pkg.account.show_balance(balance)
+    elif option == "3":
+        balance = banking_pkg.account.withdraw(balance)
+        banking_pkg.account.show_balance(balance)
+    elif option == "4":
+        banking_pkg.account.logout(name)
+        break
